@@ -1,0 +1,30 @@
+
+RUEDA LIBRE - BITACORA DE DESARROLLO
+
+MiniReto: estructura HTML y navegacion inicial
+Decisiones:
+- La pagina de inicio esta en index.html.
+- Las paginas de servicios y recorridos estan dentro de paginas/.
+- Los enlaces desde paginas/ regresan a la portada con ../index.html.
+- Las tablas usan caption y encabezados con scope para asociar sus datos.
+- Los recursos de imagen actuales estan en paginas/img/.
+
+Pruebas en Live Server (confirmar tambien visualmente en DevTools > Network):
+- URL completa del documento: http://127.0.0.1:5500/index.html
+- Protocolo: HTTP
+- Host: 127.0.0.1
+- Puerto: 5500
+- Ruta: /index.html
+- Metodo: GET
+- Estado de index.html: 200 (pagina recibida correctamente)
+- Ruta inexistente probada: /promociones.html
+- Estado de ruta inexistente: 404 (el recurso no existe en el servidor)
+- Servicios y Recorridos respondieron con estado 200.
+- Las dos imagenes referenciadas cargaron correctamente.
+- El menu permitio navegar Inicio > Servicios > Recorridos > Inicio.
+- Pendiente: agregar una tercera imagen local para representar una ruta.
+
+Roles de las tecnologias:
+- HTML estructura el contenido; por ejemplo, la tabla de servicios.
+- CSS presentara los colores y la distribucion visual del sitio.
+- JavaScript podra agregar interacciones, como filtrar recorridos.
