@@ -7,7 +7,7 @@ Decisiones:
 - Las paginas de servicios y recorridos estan dentro de paginas/.
 - Los enlaces desde paginas/ regresan a la portada con ../index.html.
 - Las tablas usan caption y encabezados con scope para asociar sus datos.
-- Los recursos de imagen actuales estan en paginas/img/.
+- Los recursos de imagen actuales estan en img/.
 
 Pruebas en Live Server (confirmar tambien visualmente en DevTools > Network):
 - URL completa del documento: http://127.0.0.1:5500/index.html
