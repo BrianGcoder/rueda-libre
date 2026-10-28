@@ -6,7 +6,7 @@ header {
     background-color: var(--color-principal);
     width: 100%;
     padding: 1rem 2 rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(26, 23, 23, 0.1);
 }
 :root{
     --color-principal: rgb(60, 129, 214);
