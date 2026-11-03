@@ -39,3 +39,77 @@ Roles de las tecnologias:
  4. cada etiquetas tienen un rol que se debe conocer para que se usan 
  5. estructure las tablas de manera que se pudiera modificar con bootstrap
  6. agregue un boton en el formulario por que por logica tiene que eniarse la informarcion del usuario y deberia de reenviarlos a la pagina de servicios
+
+
+VERSION 2.0 - MIGRACION RESPONSIVE Y COMPONENTES
+
+Implementado:
+- Hoja externa styles.css consolidada con variables CSS, Nunito Sans de Google Fonts,
+  colores heredados, clases propias, estados hover/focus y reglas responsive.
+- Bootstrap 5.0.2 y Bootstrap Icons se cargan por CDN en las cuatro paginas.
+  Bootstrap se carga antes de styles.css para que las reglas propias puedan
+  personalizar sus componentes.
+- La navegacion colapsable, llamadas a la accion y pie de pagina son consistentes
+  en inicio, recorridos, servicios y formulario.
+- Inicio usa la grilla responsive de Bootstrap y conserva el carrusel de servicios.
+- Las rutas usan CSS Grid adaptable (auto-fit/minmax); cada tarjeta usa Flexbox
+  para alinear su contenido y mantener la accion al pie.
+- La flota usa la grilla de Bootstrap: una columna en movil, dos en pantallas
+  pequenas/medianas y cuatro en escritorio. Las tablas de tarifas y bicicletas
+  usan tabla Bootstrap dentro de un contenedor responsive.
+- La seccion Beneficios de inicio se compone con clases utilitarias de Bootstrap.
+- El formulario tiene cinco campos obligatorios con feedback visual, una alerta
+  descartable y un modal para confirmar los terminos antes de enviar.
+- El encabezado, menu y pie se alinean con Flexbox; las tarjetas adaptan el
+  contenido con Flexbox y el catalogo usa Grid. Se combinan porque Grid organiza
+  filas/columnas de tarjetas y Flexbox distribuye elementos dentro de cada tarjeta.
+- Se usa una media query propia para pantallas pequenas; Bootstrap aporta los
+  breakpoints de grilla para tablet y escritorio. Las imagenes de contenido son
+  fluidas; la portada de inicio es un fondo que se muestra con contain para evitar
+  recortar la ilustracion.
+- Documentacion oficial consultada para grillas, utilidades, formularios,
+  alertas, modales y navbar:
+  https://getbootstrap.com/docs/5.0/layout/grid/
+  https://getbootstrap.com/docs/5.0/utilities/spacing/
+  https://getbootstrap.com/docs/5.0/forms/validation/
+  https://getbootstrap.com/docs/5.0/components/alerts/
+  https://getbootstrap.com/docs/5.0/components/modal/
+  https://getbootstrap.com/docs/5.0/components/navbar/
+  Iconos:
+  https://icons.getbootstrap.com/
+
+Comparativa final (datos visibles en los HTML):
+- Inicio: antes mostraba tres tarjetas simultaneas; ahora son tres diapositivas
+  navegables, y la introduccion/presentacion se apilan o se muestran en dos
+  columnas segun el breakpoint.
+- Recorridos: catalogo de 3 rutas; tarjetas en Grid adaptable. La flota contiene
+  4 tipos: Montanera, BMX, bicicleta electrica y triciclo electrico.
+- Tarifas: la tabla conserva 5 modalidades. Alquiler por horas muestra
+  $8.000/$12.000/$17.000 por hora; alquiler por dia, $35.000/$50.000/$80.000.
+  Los recorridos muestran tres valores por paquete: Medallo a Pedal
+  $45.000/$60.0000/$90.000; Conexion urbana $65.000/$80.000/$100.000;
+  Expedicion al limite $85.000/$100.0000/$120.000.
+- Formulario: 5 campos obligatorios (nombre, correo, telefono, documento y tipo
+  de bicicleta), validacion visual, alerta y confirmacion mediante modal.
+- Los tres precios escritos como $60.0000 y $100.0000 parecen tener un cero
+  adicional. Tambien hay tres valores por tarifa sin indicar a que tipo de
+  bicicleta corresponde cada uno. Se conservaron los datos existentes y deben
+  confirmarse antes de corregirlos; no se infirio una asociacion de precios.
+- El formulario es una interfaz estatica: su accion actual envia por GET a
+  servicios.html; no hay servidor que almacene reservas.
+
+| Area | Antes | Implementacion candidata v2.0 | Dato verificable |
+|---|---|---|---|
+| Inicio | Tres servicios visibles a la vez | Carrusel Bootstrap de 3 diapositivas | 3 servicios |
+| Rutas | Tarjetas de ancho fijo | CSS Grid adaptable y tarjetas Flexbox | 3 rutas |
+| Flota | Solo tabla comparativa | Grilla Bootstrap mas tabla responsive | 4 tipos |
+| Tarifas | Tabla sin estilos responsivos | Tabla Bootstrap con desplazamiento horizontal | 5 modalidades |
+| Reserva | Campos sin feedback visual | 5 campos requeridos, alerta, validacion y modal | 5 controles |
+
+Publicacion:
+- La v1.0 se identifica con el snapshot historico 5d89abe, ultimo punto anterior
+  a Bootstrap. Por decision del usuario se etiquetara como version historica,
+  aunque ese snapshot no cumple todos los requisitos de estilos de v1.0.
+- La candidata v2.0 contiene la migracion descrita en esta bitacora.
+- Se preparan etiquetas Git locales v1.0 y v2.0; no se suben al remoto ni se
+  despliega el sitio. El destino de hosting queda pendiente.
