@@ -150,3 +150,22 @@ https://getbootstrap.com/docs/5.3/layout/grid/
 https://getbootstrap.com/docs/5.3/utilities/flex/
 https://getbootstrap.com/docs/5.3/utilities/spacing/
 https://getbootstrap.com/docs/5.3/utilities/colors/
+
+ACTUALIZACION - CATALOGO COMPLETO DE BICICLETAS
+
+- Se creo bicicletas.html con una grilla responsive Bootstrap y tarjetas
+  reversibles que muestran descripcion, especificaciones disponibles y enlace
+  de reserva. La interaccion funciona con mouse, toque y teclado; respeta
+  preferencias de movimiento reducido y anuncia una sola cara a tecnologias
+  asistivas a la vez.
+- Se incluyeron Montañera, BMX, bicicleta electrica, bicicleta para dos y
+  triciclo electrico. La BMX usa un icono provisional porque no hay una foto
+  propia en img/. Las cuatro imagenes entregadas se usan para los demas tipos.
+- Se agrego el enlace Bicicletas a la navbar de todas las paginas y la opcion
+  bicicleta para dos al formulario.
+- servicios.html ahora tiene una tabla de precios sugeridos por tipo, basada en
+  los rangos de alquiler ya existentes ($8.000/$12.000/$17.000 por hora y
+  $35.000/$50.000/$80.000 por dia). Los valores se identifican como sugerencias
+  pendientes de confirmacion; los precios de recorridos se conservan en su
+  propia tabla. Las cifras de recorridos con posible cero adicional se
+  mantienen y se marcan para confirmacion, sin corregirlas por suposicion.
