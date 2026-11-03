@@ -28,3 +28,14 @@ Roles de las tecnologias:
 - HTML estructura el contenido; por ejemplo, la tabla de servicios.
 - CSS presentara los colores y la distribucion visual del sitio.
 - JavaScript podra agregar interacciones, como filtrar recorridos.
+// dia 2 metiendole a la pagina//
+
+ me tome en cuenta las clases de bootstrap 
+ decidi cambiar mi index un poco mas organizado para el CSS
+ me di cuenta que teniendolo mas organizado se pueden buscar los puentos exactos donde quieras hacer cambios 
+ 1. organizacion 
+ 2. busqueda agil
+ 3. etiquetas para cada contenido 
+ 4. cada etiquetas tienen un rol que se debe conocer para que se usan 
+ 5. estructure las tablas de manera que se pudiera modificar con bootstrap
+ 6. agregue un boton en el formulario por que por logica tiene que eniarse la informarcion del usuario y deberia de reenviarlos a la pagina de servicios
