@@ -1,35 +1,39 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #4F83B5;
+    justify-content: center;
+}
+.card-ruta {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: var(--color-principal);
-    width: 100%;
-    padding: 1rem 2 rem;
-    box-shadow: 0 2px 4px rgba(26, 23, 23, 0.1);
 }
-:root{
-    --color-principal: rgb(60, 129, 214);
-    --color-text:#0a0a0a;
-    --color-fondo:#f9fafb;
-    --font-family: 'poppins', system-iu, sans-serif;
-    
-
+.card-ruta h3 {
+    color: #198754
+    margin-bottom: 0.5rem;
 }
-body {
-    font-family: var(--font-family);
-    color: var(--color-text);
-    background-color: var(--color-fondo);
-    line-height:1.5;
+:root {
+    --verde-eco: #70C1B3;
+    --azul-urbano: #4ea8de;
+    --amarillo-sol: #f3c68f;
+    --fondo-suave: #f4f9f9;
+    --texto-principal: #2b2d42;
+    --blanco-card: #ffffff;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     
 }
-.titulos-pequeños a{
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: var(--color-text);
-
-    
-    
-}
- 
-ul
