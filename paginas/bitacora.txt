@@ -113,3 +113,40 @@ Publicacion:
 - La candidata v2.0 contiene la migracion descrita en esta bitacora.
 - Se preparan etiquetas Git locales v1.0 y v2.0; no se suben al remoto ni se
   despliega el sitio. El destino de hosting queda pendiente.
+
+
+ACTUALIZACION - NAVBAR, CATALOGO Y BENEFICIOS
+
+- Se actualizo el CDN de Bootstrap a 5.3.8 en las cuatro paginas para usar la
+  version requerida por la practica. Se conserva integridad SRI en CSS y JS.
+- La navbar usa navbar-expand-lg: el boton collapse aparece debajo de 992 px y
+  los enlaces quedan visibles desde lg. Cada pagina principal identifica su
+  enlace actual con .active y aria-current="page". El bundle se incluye una vez
+  por documento antes de </body>.
+- Se aplican botones primarios para reservar y botones outline para consultar;
+  se usan btn-lg para la accion principal de navbar y btn-sm para consulta.
+- La flota de Recorridos ahora incluye cuatro fichas con datos disponibles en
+  la tabla. El enlace Reservar lleva el tipo de bicicleta al formulario, que lo
+  preselecciona. Se agrego BMX a las opciones del formulario.
+- Bajo la flota se agrego la seccion "¿Por qué Rueda Libre?" y su franja final
+  usando exclusivamente clases/utilidades Bootstrap, sin clases CSS propias ni
+  atributos style. La decoracion se oculta en movil y aparece desde md.
+
+Clases consultadas en la documentacion oficial de Bootstrap 5.3:
+- row-cols-lg-4: distribuye cuatro columnas a partir del breakpoint lg.
+- g-3: aplica separacion uniforme entre columnas/filas de una grilla.
+- fs-5: establece un tamano de texto del sistema tipografico de Bootstrap.
+- fw-bold: aplica peso de fuente negrita.
+- text-primary: aplica el color de texto primario del tema.
+- d-none d-md-block: oculta el elemento en movil y lo muestra desde md.
+- flex-column flex-md-row: apila el contenido en movil y lo ordena en fila
+  desde md.
+- gap-4: separa elementos de un contenedor flex/grid usando el espaciado.
+
+Referencias oficiales consultadas:
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://getbootstrap.com/docs/5.3/components/navbar/
+https://getbootstrap.com/docs/5.3/layout/grid/
+https://getbootstrap.com/docs/5.3/utilities/flex/
+https://getbootstrap.com/docs/5.3/utilities/spacing/
+https://getbootstrap.com/docs/5.3/utilities/colors/
