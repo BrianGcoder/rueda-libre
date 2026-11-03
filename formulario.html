@@ -4,44 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reserva | Rueda Libre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <form action="servicios.html" method="get"></form>
-        <fieldset>
-            <legend>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-pastel">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img class="navbar-logo" src="img/log-ruedalibre.jpg" alt="">
+                    Rueda Libre
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="recorridos.html">Recorridos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    </ul>
+                    <a class="btn btn-rueda" href="formulario.html" aria-current="page">Reserva tu bicicleta</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container flex-grow-1">
+    <div class="formulario">
+        <h1>Formulario de Inscripción</h1>
+        <p>Por favor completa el siguiente formulario para inscribirte en nuestros servicios de alquiler de bicicletas y recorridos guiados.</p>
+        <p>Todos los campos son obligatorios.</p>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <i class="bi bi-info-circle" aria-hidden="true"></i>
+            Completa todos los campos para revisar los términos y enviar tu solicitud.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar alerta"></button>
+        </div>
+        <form id="formInscripcion" class="row g-3 needs-validation" action="servicios.html" method="get"
+            novalidate>
+            <fieldset class="row g-3 border-0 p-0">
+                <legend class="col-12">
                 <p> Inscribete para empezar tu experiencia con Rueda Libre</p>
-            </legend>
-            <p>
-                <label for="nombre">Nombre y Apellido:</label>
-                <input type="text" id="nombre-y-Apellido" name="" placeholder="Pepito Perez" required>
-            </p>
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="tucorreo@copialoaqui.com" required>
-                
+                </legend>
+                <div class="col-md-6">
+                <label for="nombre-y-Apellido" class="form-label">Nombre y Apellido:</label>
+                <input type="text" id="nombre-y-Apellido" name="nombre" class="form-control"
+                    placeholder="Pepito Perez" required>
+                <div class="invalid-feedback">Por favor, ingresa tu nombre y apellido.</div>
+                </div>
+                <div class="col-md-6">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control"
+                    placeholder="tucorreo@copialoaqui.com" required>
+                <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
+                </div>
+                <div class="col-md-6">
+                <label for="telefono" class="form-label"> telefono:</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control"
+                    placeholder="300422329 ejemplo" required>
+                <div class="invalid-feedback">Por favor, ingresa tu teléfono.</div>
+                </div>
+                <div class="col-md-6">
+                <label for="documento" class="form-label"> C.C.:</label>
+                <input type="number" id="documento" name="documento" class="form-control"
+                    placeholder="cedula de identidad" required>
+                <div class="invalid-feedback">Por favor, ingresa tu documento de identidad.</div>
+                </div>
+                <div class="col-12">
+                <label for="bicicleta" class="form-label">Seleciona tu bicicleta</label>
+                <select name="bicicleta" id="bicicleta" class="form-select" required>
+                    <option selected disabled value="">Seleciona tu bicicleta</option>
+                    <option value="electrica">Bicicleta Electrica</option>
+                    <option value="montaña">Bicicleta de montaña</option>
+                    <option value="triciclo">Triciclo Electrico </option>
+                </select>
+                <div class="invalid-feedback">Por favor, selecciona una bicicleta.</div>
+                </div>
+                <div class="col-12 boton">
+                    <button id="mostrarTerminos" type="button" class="btn btn-rueda">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    </main>
 
-            </p>
-            <p>
-                <Label for="telefono"> telefono:</Label>
-                <input type="tel" id="telefono" name="telefono" placeholder="300422329 ejemplo" required>
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalTerminosLabel">Términos y condiciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Al enviar este formulario, aceptas nuestros términos y condiciones.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-rueda" form="formInscripcion">Aceptar y enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            </p>
-            <p>
-                <label for="documento"> C.C.:</label>
-                <input type="number" id="documento" name="documento" placeholder="cedula de identidad" required>
-            </p>
-            <label for="">Seleciona tu bicicleta</label>
-            <select name="" id="">
-                <option value="">Bicicleta Electrica</option>
-                <option value="">Bicicleta de montaña</option>
-                <option value="">Triciclo Electrico </option>
-            </select>
-        </fieldset>
-        <div class="boton">
-            <button type="submit">Enviar</button>
-    </form>
+    <footer class="site-footer mt-auto">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+            <p>Rueda Libre | Medellín, Colombia</p>
+            <a href="mailto:hola@ruedalibre.example"><i class="bi bi-envelope" aria-hidden="true"></i> Contacto</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        const formInscripcion = document.getElementById('formInscripcion');
+        const modalTerminos = document.getElementById('modalTerminos');
+        const botonEnviar = document.getElementById('mostrarTerminos');
+
+        botonEnviar.addEventListener('click', () => {
+            formInscripcion.classList.add('was-validated');
+
+            if (!formInscripcion.checkValidity()) {
+                formInscripcion.querySelector('input:invalid, select:invalid, textarea:invalid').focus();
+                return;
+            }
+
+            new bootstrap.Modal(modalTerminos).show();
+        });
+
+        formInscripcion.addEventListener('submit', (event) => {
+            if (!formInscripcion.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                formInscripcion.classList.add('was-validated');
+            }
+        });
+    </script>
 </body>
 
 </html>
