@@ -217,6 +217,76 @@ img {
     filter: invert(1) grayscale(100%);
 }
 
+.bike-flip {
+    height: 100%;
+    min-height: 28rem;
+    perspective: 75rem;
+}
+
+.bike-flip__inner {
+    position: relative;
+    height: 100%;
+    min-height: inherit;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.bike-flip.is-flipped .bike-flip__inner {
+    transform: rotateY(180deg);
+}
+
+.bike-flip__face {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.bike-flip__front {
+    pointer-events: auto;
+}
+
+.bike-flip__back {
+    transform: rotateY(180deg);
+}
+
+.bike-flip.is-flipped .bike-flip__front {
+    pointer-events: none;
+}
+
+.bike-flip.is-flipped .bike-flip__back {
+    pointer-events: auto;
+}
+
+.bike-flip__image,
+.bike-flip__placeholder {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+}
+
+.bike-flip__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--azul-texto);
+    background-color: var(--azul-pastel);
+    font-weight: 700;
+}
+
+.bike-flip__placeholder i {
+    font-size: 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bike-flip__inner {
+        transition: none;
+    }
+}
+
 @media (max-width: 575.98px) {
     .introduccion {
         min-height: 36rem;
