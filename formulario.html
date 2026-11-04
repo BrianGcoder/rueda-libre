@@ -93,9 +93,20 @@
                 </select>
                 <div class="invalid-feedback">Por favor, selecciona una bicicleta.</div>
                 </div>
+                <div class="col-12">
+                <label for="ruta" class="form-label">Seleciona tu ruta</label>
+                <select name="ruta" id="ruta" class="form-select" required>
+                    <option selected disabled value="">Seleciona tu ruta</option>
+                    <option value="medallo-a-pedal">Ruta medallo a pedal</option>
+                    <option value="conexion-urbana">Ruta Conexion urbana/ rutas de los miradores</option>
+                    <option value="expedicion-candela">Expedicion candela</option>
+                </select>
+                <div class="invalid-feedback">Por favor, selecciona una ruta.</div>
+                </div>
                 <div class="col-12 boton">
                     <button id="mostrarTerminos" type="button" class="btn btn-primary btn-lg">Enviar</button>
                 </div>
+
             </fieldset>
         </form>
     </div>
@@ -135,13 +146,23 @@
         const formInscripcion = document.getElementById('formInscripcion');
         const modalTerminos = document.getElementById('modalTerminos');
         const botonEnviar = document.getElementById('mostrarTerminos');
-        const bicicletaSolicitada = new URLSearchParams(window.location.search).get('bicicleta');
+        const parametros = new URLSearchParams(window.location.search);
+        const bicicletaSolicitada = parametros.get('bicicleta');
+        const rutaSolicitada = parametros.get('ruta');
 
         if (bicicletaSolicitada) {
             const opcionBicicleta = Array.from(document.querySelectorAll('#bicicleta option'))
                 .find((opcion) => opcion.value === bicicletaSolicitada);
             if (opcionBicicleta) {
                 opcionBicicleta.selected = true;
+            }
+        }
+
+        if (rutaSolicitada) {
+            const opcionRuta = Array.from(document.querySelectorAll('#ruta option'))
+                .find((opcion) => opcion.value === rutaSolicitada);
+            if (opcionRuta) {
+                opcionRuta.selected = true;
             }
         }
 
