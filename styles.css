@@ -71,6 +71,10 @@ img {
     color: #176b87;
 }
 
+.navbar.navbar-pastel .navbar-nav .nav-link.active {
+    color: #104c61;
+}
+
 .navbar-logo {
     width: 3rem;
     height: 3rem;
