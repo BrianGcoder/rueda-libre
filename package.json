@@ -1,0 +1,12 @@
+{
+  "name": "rueda-libre",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/nocturna.css -o ./nocturna.css --minify",
+    "watch:css": "tailwindcss -i ./src/nocturna.css -o ./nocturna.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
