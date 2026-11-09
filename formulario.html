@@ -86,21 +86,32 @@
                 <label for="bicicleta" class="form-label">Seleciona tu bicicleta</label>
                 <select name="bicicleta" id="bicicleta" class="form-select" required>
                     <option selected disabled value="">Seleciona tu bicicleta</option>
-                    <option value="electrica">Bicicleta Electrica</option>
+                    <option value="electrica">Bicicleta eléctrica</option>
                     <option value="bmx">BMX (exp:freestyle)</option>
                     <option value="dos">Bicicleta para dos</option>
-                    <option value="triciclo">Triciclo Electrico </option>
-                    <option value="gravel">Bicicleta gravel (tarifa por confirmar)</option>
-                    <option value="trail">Bicicleta de montaña trail</option>
-                    <option value="infantil">Bicicleta infantil (tarifa por confirmar)</option>
-                    <option value="plegable">Bicicleta plegable (tarifa por confirmar)</option>
-                    <option value="urbana">Bicicleta urbana clásica (tarifa por confirmar)</option>
+                    <option value="triciclo">Triciclo eléctrico</option>
+                    <option value="gravel">Bicicleta gravel</option>
+                    <option value="trail">Bicicleta de montaña Trail</option>
+                    <option value="infantil">Bicicleta infantil</option>
+                    <option value="plegable">Bicicleta plegable</option>
+                    <option value="urbana">Bicicleta urbana clásica</option>
                 </select>
                 <div class="invalid-feedback">Por favor, selecciona una bicicleta.</div>
+                </div>
+                <div class="col-12">
+                <label for="ruta" class="form-label">Seleciona tu ruta</label>
+                <select name="ruta" id="ruta" class="form-select" required>
+                    <option selected disabled value="">Seleciona tu ruta</option>
+                    <option value="medallo-a-pedal">Ruta medallo a pedal</option>
+                    <option value="conexion-urbana">Ruta Conexion urbana/ rutas de los miradores</option>
+                    <option value="expedicion-candela">Expedicion candela</option>
+                </select>
+                <div class="invalid-feedback">Por favor, selecciona una ruta.</div>
                 </div>
                 <div class="col-12 boton">
                     <button id="mostrarTerminos" type="button" class="btn btn-primary btn-lg">Enviar</button>
                 </div>
+
             </fieldset>
         </form>
     </div>
@@ -140,13 +151,23 @@
         const formInscripcion = document.getElementById('formInscripcion');
         const modalTerminos = document.getElementById('modalTerminos');
         const botonEnviar = document.getElementById('mostrarTerminos');
-        const bicicletaSolicitada = new URLSearchParams(window.location.search).get('bicicleta');
+        const parametros = new URLSearchParams(window.location.search);
+        const bicicletaSolicitada = parametros.get('bicicleta');
+        const rutaSolicitada = parametros.get('ruta');
 
         if (bicicletaSolicitada) {
             const opcionBicicleta = Array.from(document.querySelectorAll('#bicicleta option'))
                 .find((opcion) => opcion.value === bicicletaSolicitada);
             if (opcionBicicleta) {
                 opcionBicicleta.selected = true;
+            }
+        }
+
+        if (rutaSolicitada) {
+            const opcionRuta = Array.from(document.querySelectorAll('#ruta option'))
+                .find((opcion) => opcion.value === rutaSolicitada);
+            if (opcionRuta) {
+                opcionRuta.selected = true;
             }
         }
 
