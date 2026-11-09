@@ -35,6 +35,7 @@
                         <li class="nav-item"><a class="nav-link" href="recorridos.html">Recorridos</a></li>
                         <li class="nav-item"><a class="nav-link" href="bicicletas.html">Bicicletas</a></li>
                         <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nocturna.html">Recorrido Nocturno</a></li>
                     </ul>
                     <a class="btn btn-primary btn-lg active" href="formulario.html" aria-current="page">Reserva tu bicicleta</a>
                 </div>
@@ -48,11 +49,10 @@
         <p>Todos los campos son obligatorios.</p>
         <div class="alert alert-info alert-dismissible fade show" role="alert">
             <i class="bi bi-info-circle" aria-hidden="true"></i>
-            Completa todos los campos para revisar los términos y enviar tu solicitud.
+            Completa todos los campos para revisar los términos. Esta demostración no almacena tus datos.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar alerta"></button>
         </div>
-        <form id="formInscripcion" class="row g-3 needs-validation" action="servicios.html" method="get"
-            novalidate>
+        <form id="formInscripcion" class="row g-3 needs-validation" novalidate>
             <fieldset class="row g-3 border-0 p-0">
                 <legend class="col-12">
                 <p> Inscribete para empezar tu experiencia con Rueda Libre</p>
@@ -85,11 +85,15 @@
                 <label for="bicicleta" class="form-label">Seleciona tu bicicleta</label>
                 <select name="bicicleta" id="bicicleta" class="form-select" required>
                     <option selected disabled value="">Seleciona tu bicicleta</option>
-                    <option value="electrica">Bicicleta Electrica</option>
-                    <option value="montanera">Bicicleta de montaña (Montañera)</option>
+                    <option value="electrica">Bicicleta eléctrica</option>
                     <option value="bmx">BMX (exp:freestyle)</option>
                     <option value="dos">Bicicleta para dos</option>
-                    <option value="triciclo">Triciclo Electrico </option>
+                    <option value="triciclo">Triciclo eléctrico</option>
+                    <option value="gravel">Bicicleta gravel</option>
+                    <option value="trail">Bicicleta de montaña Trail</option>
+                    <option value="infantil">Bicicleta infantil</option>
+                    <option value="plegable">Bicicleta plegable</option>
+                    <option value="urbana">Bicicleta urbana clásica</option>
                 </select>
                 <div class="invalid-feedback">Por favor, selecciona una bicicleta.</div>
                 </div>
@@ -109,6 +113,7 @@
 
             </fieldset>
         </form>
+        <div class="alert alert-success d-none mt-3" id="resultadoInscripcion" role="status" aria-live="polite" tabindex="-1"></div>
     </div>
     </main>
 
@@ -122,11 +127,11 @@
                         aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Al enviar este formulario, aceptas nuestros términos y condiciones.</p>
+                    <p>Este formulario es una demostración: los datos no se envían ni se guardan. Al continuar, solo confirmas que revisaste los términos.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary" form="formInscripcion">Aceptar y enviar</button>
+                    <button type="submit" class="btn btn-primary" form="formInscripcion">Aceptar</button>
                 </div>
             </div>
         </div>
@@ -146,6 +151,7 @@
         const formInscripcion = document.getElementById('formInscripcion');
         const modalTerminos = document.getElementById('modalTerminos');
         const botonEnviar = document.getElementById('mostrarTerminos');
+        const resultadoInscripcion = document.getElementById('resultadoInscripcion');
         const parametros = new URLSearchParams(window.location.search);
         const bicicletaSolicitada = parametros.get('bicicleta');
         const rutaSolicitada = parametros.get('ruta');
@@ -178,11 +184,18 @@
         });
 
         formInscripcion.addEventListener('submit', (event) => {
+            event.preventDefault();
+
             if (!formInscripcion.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
                 formInscripcion.classList.add('was-validated');
+                formInscripcion.querySelector('input:invalid, select:invalid, textarea:invalid').focus();
+                return;
             }
+
+            bootstrap.Modal.getInstance(modalTerminos)?.hide();
+            resultadoInscripcion.textContent = 'Formulario validado. Esta demostración no envía ni guarda tus datos; comunícate con Rueda Libre para confirmar una reserva.';
+            resultadoInscripcion.classList.remove('d-none');
+            resultadoInscripcion.focus();
         });
     </script>
 </body>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vive Medellín de noche en bicicleta con Rueda Nocturna de Rueda Libre.">
+    <meta name="theme-color" content="#090d1a">
+    <title>Rueda Nocturna | Rueda Libre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nocturna.css">
+</head>
+<body class="min-h-screen bg-slate-50 font-display text-slate-900 antialiased transition-colors duration-300 dark:bg-night-950 dark:text-slate-100">
+    <header class="border-b border-white/10 bg-night-950/90">
+        <nav class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8" aria-label="Navegación principal">
+            <a class="flex items-center gap-3 text-lg font-extrabold tracking-wide text-white" href="index.html">
+                <img class="h-10 w-10 rounded-full object-contain" src="img/log-ruedalibre.jpg" alt="">
+                <span>Rueda <span class="text-neon">Libre</span></span>
+            </a>
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-bold text-slate-300">
+                <a class="transition hover:text-neon focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon" href="index.html">Inicio</a>
+                <a class="transition hover:text-neon focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon" href="recorridos.html">Recorridos</a>
+                <a class="transition hover:text-neon focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon" href="bicicletas.html">Bicicletas</a>
+                <a class="transition hover:text-neon focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon" href="servicios.html">Servicios</a>
+                <a class="text-neon" href="nocturna.html" aria-current="page">Rueda Nocturna</a>
+                <button class="rounded-full border border-white/20 px-3 py-2 text-xs font-bold text-slate-100 transition hover:border-neon hover:text-neon focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon" id="themeToggle" type="button" aria-pressed="true" aria-label="Cambiar al tema claro">
+                    <span id="themeToggleLabel">☀ Tema claro</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative isolate overflow-hidden border-b border-white/10" aria-labelledby="heroTitle">
+            <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_75%_35%,rgba(190,242,100,0.12),transparent_38%),linear-gradient(135deg,#111a2e_0%,#090d1a_60%)]"></div>
+            <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2 lg:px-8 lg:py-28">
+                <div>
+                    <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-neon/30 bg-neon/10 px-4 py-2 text-sm font-extrabold uppercase tracking-[0.18em] text-neon">
+                        <span class="h-2 w-2 rounded-full bg-neon shadow-[0_0_14px_2px_rgba(190,242,100,0.7)]" aria-hidden="true"></span>
+                        Medellín después del atardecer
+                    </p>
+                    <h1 class="max-w-3xl text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl" id="heroTitle">
+                        La ciudad se ve <span class="text-neon">distinta</span> sobre ruedas.
+                    </h1>
+                    <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+                        Enciende las luces, ponte el casco y descubre otra cara de Medellín con Rueda Nocturna, la experiencia de Rueda Libre.
+                    </p>
+                    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                        <a class="rn-btn rn-btn-primary" href="#inscripcion">Quiero rodar de noche <span aria-hidden="true">→</span></a>
+                        <a class="rn-btn rn-btn-secondary" href="#rutas">Explorar rutas</a>
+                    </div>
+                    <p class="mt-5 text-sm text-slate-400">Salidas, horarios y tarifas sujetos a confirmación.</p>
+                </div>
+                <div class="relative mx-auto w-full max-w-xl">
+                    <div class="absolute -inset-4 rounded-[2rem] bg-neon/10 blur-2xl" aria-hidden="true"></div>
+                    <figure class="relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-night-900 shadow-2xl shadow-black/40">
+                        <img class="h-72 w-full object-cover sm:h-[26rem]" src="img/bici-electrica.jpeg" alt="Bicicleta eléctrica de Rueda Libre preparada para salir">
+                        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night-950 via-night-950/80 to-transparent p-6 pt-16">
+                            <span class="text-sm font-bold uppercase tracking-[0.18em] text-neon">Una nueva perspectiva</span>
+                            <p class="mt-1 text-xl font-extrabold text-white">Tu próxima historia empieza al anochecer.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20" id="rutas" aria-labelledby="routesTitle">
+            <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="mb-2 text-sm font-extrabold uppercase tracking-[0.18em] text-neon">Tres formas de vivir la noche</p>
+                    <h2 class="text-3xl font-black text-white sm:text-4xl" id="routesTitle">Elige tu próxima ruta</h2>
+                </div>
+                <a class="font-bold text-neon underline decoration-neon/50 underline-offset-4 hover:decoration-neon" href="recorridos.html">Conoce todos los recorridos <span aria-hidden="true">→</span></a>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <article class="rn-card group">
+                    <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" src="img/bici-gravel-aventura.jpg" alt="Ciclista en una ruta de aventura">
+                    <div class="p-6">
+                        <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-neon">Nivel inicial</p>
+                        <h3 class="mt-2 text-xl font-extrabold text-white">Circuito de parques</h3>
+                        <p class="mt-3 leading-7 text-slate-300">Un paseo tranquilo para disfrutar los espacios urbanos y empezar a rodar en grupo.</p>
+                        <a class="mt-5 inline-flex font-bold text-neon underline decoration-neon/50 underline-offset-4 hover:decoration-neon" href="#inscripcion">Consultar esta ruta <span class="ml-2" aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+                <article class="rn-card group">
+                    <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" src="img/bici_montana.jpg" alt="Ciclistas recorriendo un sendero de montaña">
+                    <div class="p-6">
+                        <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-neon">Nivel intermedio</p>
+                        <h3 class="mt-2 text-xl font-extrabold text-white">Circuito de miradores</h3>
+                        <p class="mt-3 leading-7 text-slate-300">Sube a tu ritmo y contempla las luces de Medellín desde sus miradores.</p>
+                        <a class="mt-5 inline-flex font-bold text-neon underline decoration-neon/50 underline-offset-4 hover:decoration-neon" href="#inscripcion">Consultar esta ruta <span class="ml-2" aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+                <article class="rn-card group md:col-span-2 xl:col-span-1">
+                    <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-105" src="img/bicicleta-urbana-clasica.webp" alt="Bicicleta urbana lista para recorrer la ciudad">
+                    <div class="p-6">
+                        <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-neon">Nivel avanzado</p>
+                        <h3 class="mt-2 text-xl font-extrabold text-white">Expedición Candela</h3>
+                        <p class="mt-3 leading-7 text-slate-300">Un reto para ciclistas con experiencia que buscan una salida nocturna más intensa.</p>
+                        <a class="mt-5 inline-flex font-bold text-neon underline decoration-neon/50 underline-offset-4 hover:decoration-neon" href="#inscripcion">Consultar esta ruta <span class="ml-2" aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+            </div>
+            <p class="rn-alert mt-6" role="note"><strong>Antes de salir:</strong> las rutas de esta landing son una propuesta nocturna basada en los recorridos de Rueda Libre. Confirma disponibilidad, horario y condiciones con el equipo.</p>
+        </section>
+
+        <section class="border-y border-white/10 bg-night-900/70" id="planes" aria-labelledby="plansTitle">
+            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+                <div class="mx-auto mb-10 max-w-2xl text-center">
+                    <p class="mb-2 text-sm font-extrabold uppercase tracking-[0.18em] text-neon">Planes a tu ritmo</p>
+                    <h2 class="text-3xl font-black text-white sm:text-4xl" id="plansTitle">Arma tu noche ideal</h2>
+                    <p class="mt-4 leading-7 text-slate-300">Elige el tipo de experiencia y cuéntanos qué necesitas. Te confirmaremos disponibilidad y tarifa.</p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                    <article class="rn-card flex flex-col p-6">
+                        <p class="text-sm font-extrabold uppercase tracking-[0.16em] text-neon">Para empezar</p>
+                        <h3 class="mt-2 text-2xl font-black text-white">Rodada esencial</h3>
+                        <p class="mt-3 flex-1 leading-7 text-slate-300">Una ruta guiada para descubrir la ciudad y compartir el camino con el grupo.</p>
+                        <p class="mt-5 border-t border-white/10 pt-4 text-sm font-bold text-slate-200">Tarifa por confirmar</p>
+                        <a class="rn-btn rn-btn-secondary mt-5 w-full" href="#inscripcion" data-plan="esencial">Elegir este plan</a>
+                    </article>
+                    <article class="rn-card flex flex-col border-neon/50 p-6 shadow-[0_0_36px_rgba(190,242,100,0.08)]">
+                        <p class="text-sm font-extrabold uppercase tracking-[0.16em] text-neon">Para explorar</p>
+                        <h3 class="mt-2 text-2xl font-black text-white">Noche panorámica</h3>
+                        <p class="mt-3 flex-1 leading-7 text-slate-300">Una salida para recorrer miradores y detenerse a disfrutar las vistas nocturnas.</p>
+                        <p class="mt-5 border-t border-white/10 pt-4 text-sm font-bold text-slate-200">Tarifa por confirmar</p>
+                        <a class="rn-btn rn-btn-primary mt-5 w-full" href="#inscripcion" data-plan="panoramica">Elegir este plan</a>
+                    </article>
+                    <article class="rn-card flex flex-col p-6">
+                        <p class="text-sm font-extrabold uppercase tracking-[0.16em] text-neon">Para tu grupo</p>
+                        <h3 class="mt-2 text-2xl font-black text-white">Salida privada</h3>
+                        <p class="mt-3 flex-1 leading-7 text-slate-300">Cuéntanos el tamaño de tu grupo y el tipo de ruta que quieren vivir.</p>
+                        <p class="mt-5 border-t border-white/10 pt-4 text-sm font-bold text-slate-200">Tarifa por confirmar</p>
+                        <a class="rn-btn rn-btn-secondary mt-5 w-full" href="#inscripcion" data-plan="privada">Consultar disponibilidad</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-20" id="inscripcion" aria-labelledby="signupTitle">
+            <div>
+                <p class="mb-2 text-sm font-extrabold uppercase tracking-[0.18em] text-neon">Tu próxima salida</p>
+                <h2 class="text-3xl font-black text-white sm:text-4xl" id="signupTitle">Inscríbete a Rueda Nocturna</h2>
+                <p class="mt-4 leading-7 text-slate-300">Déjanos tus datos y el equipo podrá orientarte sobre rutas, disponibilidad, bicicleta y tarifa.</p>
+                <div class="rn-alert mt-6" role="note">
+                    Este formulario valida los datos en esta demostración, pero no los envía ni almacena. Para una reserva real, continúa en el formulario general de Rueda Libre.
+                </div>
+                <a class="mt-5 inline-flex font-bold text-neon underline decoration-neon/50 underline-offset-4 hover:decoration-neon" href="formulario.html">Ir al formulario de reserva de Rueda Libre <span class="ml-2" aria-hidden="true">→</span></a>
+            </div>
+
+            <form class="rn-card space-y-5 p-6 sm:p-8" id="nightSignup" novalidate>
+                <div>
+                    <label class="rn-label" for="fullName">Nombre completo</label>
+                    <input class="rn-input" id="fullName" name="nombre" type="text" autocomplete="name" minlength="3" required aria-describedby="nameHint">
+                    <p class="mt-1 text-xs text-slate-400" id="nameHint">Escribe al menos 3 caracteres.</p>
+                    <p class="field-error mt-1 text-sm font-bold text-rose-300">Ingresa tu nombre completo.</p>
+                </div>
+                <div>
+                    <label class="rn-label" for="email">Correo electrónico</label>
+                    <input class="rn-input" id="email" name="email" type="email" autocomplete="email" required>
+                    <p class="field-error mt-1 text-sm font-bold text-rose-300">Ingresa un correo electrónico válido.</p>
+                </div>
+                <div>
+                    <label class="rn-label" for="phone">Teléfono</label>
+                    <input class="rn-input" id="phone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+() -]{7,20}" required aria-describedby="phoneHint">
+                    <p class="mt-1 text-xs text-slate-400" id="phoneHint">Incluye un número de contacto válido.</p>
+                    <p class="field-error mt-1 text-sm font-bold text-rose-300">Revisa el número de teléfono.</p>
+                </div>
+                <div>
+                    <label class="rn-label" for="planChoice">Plan de interés</label>
+                    <select class="rn-input" id="planChoice" name="plan" required>
+                        <option value="" selected disabled>Selecciona un plan</option>
+                        <option value="esencial">Rodada esencial</option>
+                        <option value="panoramica">Noche panorámica</option>
+                        <option value="privada">Salida privada</option>
+                    </select>
+                    <p class="field-error mt-1 text-sm font-bold text-rose-300">Selecciona un plan.</p>
+                </div>
+                <label class="flex items-start gap-3 text-sm leading-6 text-slate-300">
+                    <input class="mt-1 h-4 w-4 accent-neon focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon" id="terms" name="confirmacion" type="checkbox" required>
+                    <span>Entiendo que esta solicitud es una demostración y no confirma una reserva.</span>
+                </label>
+                <p class="field-error text-sm font-bold text-rose-300">Marca la casilla para continuar.</p>
+                <button class="rn-btn rn-btn-primary w-full" type="submit">Validar mi inscripción</button>
+                <p class="hidden rounded-xl border border-neon/30 bg-neon/10 p-4 text-sm font-bold leading-6 text-neon" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-night-900">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-sm text-slate-400 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+            <p>Rueda Libre · Medellín, Colombia</p>
+            <div class="flex flex-wrap gap-x-5 gap-y-2">
+                <a class="hover:text-neon" href="index.html">Volver a Rueda Libre</a>
+                <a class="hover:text-neon" href="recorridos.html">Otros recorridos</a>
+                <a class="hover:text-neon" href="mailto:hola@ruedalibre.example">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleLabel = document.getElementById('themeToggleLabel');
+        const root = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = root.classList.toggle('dark');
+            themeToggle.setAttribute('aria-pressed', String(isDark));
+            themeToggle.setAttribute('aria-label', isDark ? 'Cambiar al tema claro' : 'Cambiar al tema oscuro');
+            themeToggleLabel.textContent = isDark ? '☀ Tema claro' : '☾ Tema oscuro';
+        });
+
+        const signupForm = document.getElementById('nightSignup');
+        const formStatus = document.getElementById('formStatus');
+
+        signupForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            signupForm.classList.add('was-validated');
+
+            if (!signupForm.checkValidity()) {
+                signupForm.querySelector(':invalid').focus();
+                formStatus.classList.add('hidden');
+                return;
+            }
+
+            formStatus.textContent = '¡Datos validados! Esta demostración no envía ni guarda tu información. Para coordinar una reserva, usa el formulario general de Rueda Libre.';
+            formStatus.classList.remove('hidden');
+        });
+
+        signupForm.addEventListener('input', (event) => {
+            const field = event.target;
+            if (field.matches('input, select') && field.checkValidity()) {
+                field.removeAttribute('aria-invalid');
+            }
+        });
+
+        signupForm.addEventListener('invalid', (event) => {
+            event.target.setAttribute('aria-invalid', 'true');
+        }, true);
+
+        document.querySelectorAll('[data-plan]').forEach((link) => {
+            link.addEventListener('click', () => {
+                document.getElementById('planChoice').value = link.dataset.plan;
+            });
+        });
+    </script>
+</body>
+</html>

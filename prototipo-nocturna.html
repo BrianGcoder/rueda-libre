@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prototipo educativo de Rueda Nocturna con Tailwind Play CDN.">
+    <title>Prototipo Rueda Nocturna | Rueda Libre</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-prototype-night: #090d1a;
+            --color-prototype-neon: #bef264;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-prototype-night px-4 py-12 text-slate-100">
+    <main class="mx-auto flex min-h-[70vh] max-w-5xl flex-col justify-center">
+        <p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-prototype-neon">Prototipo · Play CDN</p>
+        <h1 class="max-w-3xl text-4xl font-black leading-tight sm:text-6xl">Pedalea Medellín bajo otra luz.</h1>
+        <p class="mt-5 max-w-xl text-lg leading-8 text-slate-300">Un primer boceto utility-first para probar el tono y la llamada a la acción de Rueda Nocturna.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+            <a class="rounded-xl bg-prototype-neon px-5 py-3 font-extrabold text-prototype-night transition hover:bg-lime-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="nocturna.html">Ver landing final</a>
+            <a class="rounded-xl border border-white/25 px-5 py-3 font-bold text-white transition hover:border-prototype-neon hover:text-prototype-neon focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="index.html">Volver a Rueda Libre</a>
+        </div>
+        <p class="mt-8 text-sm text-slate-400">Esta página usa Play CDN solo como ejercicio de prototipado. La landing final usa Tailwind CLI y CSS compilado.</p>
+    </main>
+</body>
+</html>

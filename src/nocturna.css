@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-night-950: #090d1a;
+    --color-night-900: #111a2e;
+    --color-neon: #bef264;
+    --font-display: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+    .field-error {
+        display: none;
+    }
+
+    .rn-btn {
+        @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-5 py-3 text-center font-extrabold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon active:translate-y-px;
+    }
+
+    .rn-btn-primary {
+        @apply bg-neon text-night-950 hover:bg-lime-300;
+    }
+
+    .rn-btn-secondary {
+        @apply border border-white/20 bg-white/5 text-white hover:border-neon/60 hover:bg-white/10;
+    }
+
+    .rn-card {
+        @apply overflow-hidden rounded-3xl border border-white/10 bg-night-900 shadow-xl shadow-black/10;
+    }
+
+    .rn-alert {
+        @apply rounded-2xl border border-neon/20 bg-neon/5 p-4 text-sm leading-6 text-slate-200;
+    }
+
+    .rn-input {
+        @apply mt-2 block min-h-12 w-full rounded-xl border border-white/15 bg-night-950 px-4 py-3 text-base text-white outline-none transition placeholder:text-slate-500 focus:border-neon focus:ring-2 focus:ring-neon/30;
+    }
+
+    .rn-input option {
+        @apply bg-night-950 text-white;
+    }
+
+    .rn-label {
+        @apply block text-sm font-extrabold text-slate-100;
+    }
+
+    .was-validated :is(input, select):invalid {
+        @apply border-rose-400 focus:border-rose-400 focus:ring-rose-400/30;
+    }
+
+    .was-validated :is(input, select):invalid ~ .field-error,
+    .was-validated label:has(input:invalid) + .field-error {
+        @apply block;
+    }
+
+    .dark {
+        color-scheme: dark;
+    }
+
+    html:not(.dark) body {
+        @apply bg-slate-50 text-slate-900;
+    }
+
+    html:not(.dark) footer,
+    html:not(.dark) #plans {
+        @apply border-slate-200 bg-white;
+    }
+
+    html:not(.dark) #plans {
+        @apply bg-slate-100;
+    }
+
+    html:not(.dark) .rn-card {
+        @apply border-slate-200 bg-white shadow-slate-900/10;
+    }
+
+    html:not(.dark) .rn-card h3,
+    html:not(.dark) #routesTitle,
+    html:not(.dark) #plansTitle,
+    html:not(.dark) #signupTitle,
+    html:not(.dark) .rn-label {
+        @apply text-slate-900;
+    }
+
+    html:not(.dark) .rn-card p,
+    html:not(.dark) #inscripcion p,
+    html:not(.dark) footer {
+        @apply text-slate-600;
+    }
+
+    html:not(.dark) .rn-input {
+        @apply border-slate-300 bg-white text-slate-900;
+    }
+
+    html:not(.dark) .rn-input option {
+        @apply bg-white text-slate-900;
+    }
+
+    html:not(.dark) .rn-alert {
+        @apply border-lime-700/20 bg-lime-100 text-slate-800;
+    }
+
+    html:not(.dark) .rn-btn-secondary {
+        @apply border-slate-300 bg-white text-slate-900 hover:bg-slate-100;
+    }
+}
