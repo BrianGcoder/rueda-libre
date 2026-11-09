@@ -4,7 +4,7 @@ Sitio modular de alquiler de bicicletas y recorridos en Medellín. El sitio prin
 
 ## Sitio publicado
 
-La versión publicada está en [Rueda Libre en GitHub Pages](https://briangcoder.github.io/rueda-libre/). La landing de campaña está disponible en [Rueda Nocturna](https://briangcoder.github.io/rueda-libre/nocturna.html).
+La versión publicada está en [Rueda Libre en GitHub Pages](https://briangcoder.github.io/rueda-libre/). La landing [Rueda Nocturna](https://briangcoder.github.io/rueda-libre/nocturna.html) se publicará al integrar este trabajo a `master` y completar el despliegue de GitHub Pages.
 
 ## Requisitos
 
@@ -54,7 +54,7 @@ El formulario valida nombre, correo, teléfono, plan y confirmación. Es una dem
 1. Ejecuta `npm install` y `npm run build:css`.
 2. Sube a GitHub los archivos de la landing, `nocturna.css`, `src/nocturna.css`, `package.json` y `package-lock.json`.
 3. Integra los cambios a la rama `master` y, en **Settings → Pages**, configura la publicación desde esa rama y la carpeta raíz del repositorio.
-4. Comprueba el enlace que GitHub Pages muestra en esa pantalla; la landing está en `/nocturna.html`.
+4. Comprueba el enlace que GitHub Pages muestra en esa pantalla; la landing queda en `/nocturna.html`.
 
 La publicación requiere subir los cambios y tener GitHub Pages habilitado en el repositorio. La disponibilidad del formulario no equivale a una reserva real.
 
