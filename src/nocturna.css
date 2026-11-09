@@ -63,7 +63,6 @@
         @apply bg-slate-50 text-slate-900;
     }
 
-    html:not(.dark) header,
     html:not(.dark) footer,
     html:not(.dark) #plans {
         @apply border-slate-200 bg-white;
@@ -78,7 +77,6 @@
     }
 
     html:not(.dark) .rn-card h3,
-    html:not(.dark) #heroTitle,
     html:not(.dark) #routesTitle,
     html:not(.dark) #plansTitle,
     html:not(.dark) #signupTitle,
@@ -88,7 +86,6 @@
 
     html:not(.dark) .rn-card p,
     html:not(.dark) #inscripcion p,
-    html:not(.dark) header nav a:not([aria-current="page"]),
     html:not(.dark) footer {
         @apply text-slate-600;
     }
