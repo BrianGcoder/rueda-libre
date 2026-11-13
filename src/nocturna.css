@@ -59,50 +59,107 @@
         color-scheme: dark;
     }
 
-    html:not(.dark) body {
-        @apply bg-slate-50 text-slate-900;
-    }
+}
 
-    html:not(.dark) footer,
-    html:not(.dark) #plans {
-        @apply border-slate-200 bg-white;
-    }
+html:not(.dark) body {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
 
-    html:not(.dark) #plans {
-        @apply bg-slate-100;
-    }
+html:not(.dark) header,
+html:not(.dark) footer {
+    border-color: #e2e8f0;
+    background-color: #fff;
+}
 
-    html:not(.dark) .rn-card {
-        @apply border-slate-200 bg-white shadow-slate-900/10;
-    }
+html:not(.dark) header nav > a,
+html:not(.dark) header nav > div {
+    color: #334155;
+}
 
-    html:not(.dark) .rn-card h3,
-    html:not(.dark) #routesTitle,
-    html:not(.dark) #plansTitle,
-    html:not(.dark) #signupTitle,
-    html:not(.dark) .rn-label {
-        @apply text-slate-900;
-    }
+html:not(.dark) header nav a[aria-current="page"] {
+    color: #4d7c0f;
+}
 
-    html:not(.dark) .rn-card p,
-    html:not(.dark) #inscripcion p,
-    html:not(.dark) footer {
-        @apply text-slate-600;
-    }
+html:not(.dark) header nav button {
+    border-color: #cbd5e1;
+    color: #334155;
+}
 
-    html:not(.dark) .rn-input {
-        @apply border-slate-300 bg-white text-slate-900;
-    }
+html:not(.dark) main > section[aria-labelledby="heroTitle"] {
+    border-color: #e2e8f0;
+}
 
-    html:not(.dark) .rn-input option {
-        @apply bg-white text-slate-900;
-    }
+html:not(.dark) main > section[aria-labelledby="heroTitle"] > div:first-child {
+    background-image:
+        radial-gradient(ellipse at 75% 35%, rgb(190 242 100 / 24%), transparent 38%),
+        linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
 
-    html:not(.dark) .rn-alert {
-        @apply border-lime-700/20 bg-lime-100 text-slate-800;
-    }
+html:not(.dark) #heroTitle,
+html:not(.dark) #routesTitle,
+html:not(.dark) #plansTitle,
+html:not(.dark) #signupTitle,
+html:not(.dark) .rn-card h3 {
+    color: #0f172a;
+}
 
-    html:not(.dark) .rn-btn-secondary {
-        @apply border-slate-300 bg-white text-slate-900 hover:bg-slate-100;
-    }
+html:not(.dark) main p.text-slate-300,
+html:not(.dark) main p.text-slate-200,
+html:not(.dark) .rn-label {
+    color: #475569;
+}
+
+html:not(.dark) main p.text-slate-400 {
+    color: #64748b;
+}
+
+html:not(.dark) .rn-card {
+    border-color: #e2e8f0;
+    background-color: #fff;
+    --tw-shadow-color: rgb(15 23 42 / 10%);
+}
+
+html:not(.dark) .rn-card p,
+html:not(.dark) #inscripcion p,
+html:not(.dark) footer {
+    color: #475569;
+}
+
+html:not(.dark) #plans {
+    border-color: #e2e8f0;
+    background-color: #f1f5f9;
+}
+
+html:not(.dark) .rn-input {
+    border-color: #cbd5e1;
+    background-color: #fff;
+    color: #0f172a;
+}
+
+html:not(.dark) .rn-input option {
+    background-color: #fff;
+    color: #0f172a;
+}
+
+html:not(.dark) .rn-alert {
+    border-color: rgb(77 124 15 / 20%);
+    background-color: #ecfccb;
+    color: #1e293b;
+}
+
+html:not(.dark) .rn-btn-secondary {
+    border-color: #cbd5e1;
+    background-color: #fff;
+    color: #0f172a;
+}
+
+html:not(.dark) .field-error {
+    color: #be123c;
+}
+
+html:not(.dark) #formStatus {
+    border-color: rgb(77 124 15 / 30%);
+    background-color: #ecfccb;
+    color: #3f6212;
 }

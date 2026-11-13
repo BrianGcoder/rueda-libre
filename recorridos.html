@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora Medellín en bicicleta con los recorridos guiados de Rueda Libre.">
-    <title>Recorridos | Rueda Libre</title>
+    <meta name="description" content="Conoce los recorridos guiados y las tarifas de referencia de Rueda Libre en Medellín.">
+    <title>Recorridos y tarifas | Rueda Libre</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -30,10 +30,9 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="recorridos.html">Recorridos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="bicicletas.html">Bicicletas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nocturna.html">Recorrido Nocturno</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="recorridos.html">Recorridos y tarifas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#bicicletas">Bicicletas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nocturna.html">Rueda Nocturna</a></li>
                     </ul>
                     <a class="btn btn-primary btn-lg" href="formulario.html">Reserva tu bicicleta</a>
                 </div>
@@ -42,204 +41,102 @@
     </header>
 
     <main class="container py-4">
-        <section class="rutas guiadas mb-5">
-            <h2>Rutas guiadas</h2>
-            <div class="rutas-grid">
-            <article class="card-ruta">
-                <span class="badge-ruta">Guiada</span>
-                <h3>Medallo a Pedal-Circuito Parques</h3>
-                <p class="ruta-dato"><strong>Dificultad:</strong><span>Baja (facil)</span></p>
-                <p><strong>Nivel del Ciclista</strong></p>
-                <span>Principiante</span>
-                <a class="btn btn-primary mt-auto align-self-start" href="formulario.html?ruta=medallo-a-pedal">Reservar ruta</a>
-             </article>
-            <article class="card-ruta">
-                <span class="badge-ruta">Guiada</span>
-                <h3>Conexion Urbana-Circuito miradores</h3>
-                <p class="ruta-dato"><strong>Dificultad:</strong><span>Media (intermedia)</span></p>
-                <p><strong>Nivel del Ciclista</strong></p>
-                <span>Intermedio</span>
-                <a class="btn btn-primary mt-auto align-self-start" href="formulario.html?ruta=conexion-urbana">Reservar ruta</a>
-            </article>
-            <article class="card-ruta">
-                <span class="badge-ruta">Guiada</span>
-                <h3>Expedicion Candela</h3>
-                <p class="ruta-dato"><strong>Dificultad:</strong><span>Alta (difícil)</span></p>
-                <p><strong>Nivel del Ciclista</strong></p>
-                <span>Avanzado</span>
-                <a class="btn btn-primary mt-auto align-self-start" href="formulario.html?ruta=expedicion-candela">Reservar ruta</a>
-            </article>
+        <header class="mb-4">
+            <h1>Recorridos y tarifas</h1>
+            <p class="lead">Elige una ruta y consulta los precios de referencia de bicicletas y recorridos.</p>
+        </header>
+
+        <section class="mb-5" aria-labelledby="rutasTitulo">
+            <h2 class="mb-3" id="rutasTitulo">Recorridos guiados</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Medallo a Pedal</h3>
+                            <p>Circuito por parques para ciclistas principiantes. Duración: 2 a 3 horas.</p>
+                            <p class="mt-auto">Incluye bicicleta, equipo de seguridad, guía y póliza.</p>
+                            <a class="btn btn-primary" href="formulario.html?ruta=medallo-a-pedal">Consultar esta ruta</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Conexión Urbana</h3>
+                            <p>Un recorrido por los miradores para nivel intermedio. Duración: 3 a 4 horas.</p>
+                            <p class="mt-auto">Incluye bicicleta, equipo de seguridad, guía, póliza y refrigerio.</p>
+                            <a class="btn btn-primary" href="formulario.html?ruta=conexion-urbana">Consultar esta ruta</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5">Expedición Candela</h3>
+                            <p>Una ruta exigente para ciclistas avanzados. Duración: 5 a 8 horas.</p>
+                            <p class="mt-auto">Incluye bicicleta, equipo de seguridad, guía, póliza y almuerzo.</p>
+                            <a class="btn btn-primary" href="formulario.html?ruta=expedicion-candela">Consultar esta ruta</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
-        <section class="flota-bicicletas mb-5">
-            <h2>Tipos de bicicletas</h2>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
-                <div class="col">
-                    <article class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                        <i class="bi bi-bicycle fs-2 text-primary" aria-hidden="true"></i>
-                        <h3 class="h5 mt-2">Montaña Trail</h3>
-                        <ul class="list-unstyled">
-                            <li><strong>Uso:</strong> por hora o día, sin guía</li>
-                            <li><strong>Características:</strong> suspensión delantera y 21 cambios</li>
-                            <li><strong>Exigencia:</strong> alta</li>
-                        </ul>
-                        <a class="btn btn-primary mt-auto" href="formulario.html?bicicleta=trail">Reservar</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col">
-                    <article class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                        <i class="bi bi-bicycle fs-2 text-primary" aria-hidden="true"></i>
-                        <h3 class="h5 mt-2">BMX (exp:freestyle)</h3>
-                        <ul class="list-unstyled">
-                            <li><strong>Uso:</strong> hora/ dia/ sin guia</li>
-                            <li><strong>Rutas:</strong> skateparks / ciudad</li>
-                            <li><strong>Exigencia:</strong> alta</li>
-                        </ul>
-                        <a class="btn btn-primary mt-auto" href="formulario.html?bicicleta=bmx">Reservar</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col">
-                    <article class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                        <i class="bi bi-lightning-charge fs-2 text-primary" aria-hidden="true"></i>
-                        <h3 class="h5 mt-2">Bicicleta eléctrica</h3>
-                        <ul class="list-unstyled">
-                            <li><strong>Uso:</strong> por hora o día, sin guía</li>
-                            <li><strong>Rutas:</strong> recorridos urbanos</li>
-                            <li><strong>Autonomía:</strong> hasta 45 km</li>
-                        </ul>
-                        <a class="btn btn-primary mt-auto" href="formulario.html?bicicleta=electrica">Reservar</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col">
-                    <article class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                        <i class="bi bi-bicycle fs-2 text-primary" aria-hidden="true"></i>
-                        <h3 class="h5 mt-2">Triciclo Electrico</h3>
-                        <ul class="list-unstyled">
-                            <li><strong>Uso:</strong> hora/ dia/ sin guia</li>
-                            <li><strong>Rutas:</strong> todas las rutas</li>
-                            <li><strong>Capacidad:</strong> 150 kg</li>
-                            <li><strong>Velocidad máxima:</strong> 45 km/h</li>
-                        </ul>
-                        <a class="btn btn-primary mt-auto" href="formulario.html?bicicleta=triciclo">Reservar</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col">
-                    <article class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                        <i class="bi bi-people fs-2 text-primary" aria-hidden="true"></i>
-                        <h3 class="h5 mt-2">Bicicleta para dos</h3>
-                        <p>Una opción para compartir el paseo.</p>
-                        <a class="btn btn-outline-primary mt-auto" href="bicicletas.html">Ver catálogo completo</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <p class="mt-3"><a class="btn btn-outline-primary" href="bicicletas.html">Explorar el catálogo completo</a></p>
-        </section>
-        <section class="py-4 py-md-5">
-            <h2 class="text-center fs-2 fw-bold mb-4">¿Por qué Rueda Libre?</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
-                <article class="col">
-                    <div class="h-100 p-4 bg-white rounded shadow-sm">
-                        <h3 class="fs-5 fw-bold text-primary">Bicicletas revisadas</h3>
-                        <p class="text-secondary">Revisión antes de cada alquiler.</p>
-                        <p class="mb-0 fw-bold text-success">En cada alquiler</p>
-                    </div>
-                </article>
-                <article class="col">
-                    <div class="h-100 p-4 bg-white rounded shadow-sm">
-                        <h3 class="fs-5 fw-bold text-primary">Casco y candado</h3>
-                        <p class="text-secondary">Elementos de seguridad incluidos.</p>
-                        <p class="mb-0 fw-bold text-success">Incluidos</p>
-                    </div>
-                </article>
-                <article class="col">
-                    <div class="h-100 p-4 bg-white rounded shadow-sm">
-                        <h3 class="fs-5 fw-bold text-primary">Guías certificados</h3>
-                        <p class="text-secondary">Acompañamiento para tus recorridos guiados.</p>
-                        <p class="mb-0 fw-bold text-success">Personal certificado</p>
-                    </div>
-                </article>
-                <article class="col">
-                    <div class="h-100 p-4 bg-white rounded shadow-sm">
-                        <h3 class="fs-5 fw-bold text-primary">Puntos de devolución</h3>
-                        <p class="text-secondary">Devuelve tu bicicleta en cualquiera de las sedes.</p>
-                        <p class="mb-0 fw-bold text-success">3 sedes</p>
-                    </div>
-                </article>
+
+        <section class="mb-5" id="tarifas" aria-labelledby="tarifasBicicletasTitulo">
+            <h2 class="mb-3" id="tarifasBicicletasTitulo">Tarifas de bicicletas</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                    <caption class="caption-top">Precios de referencia para alquiler de bicicletas, ordenados por tarifa por hora de menor a mayor.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Bicicleta</th>
+                            <th scope="col">Por hora</th>
+                            <th scope="col">Por día</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">BMX</th><td>$8.000</td><td>$35.000</td></tr>
+                        <tr><th scope="row">Bicicleta infantil</th><td>$8.000</td><td>$35.000</td></tr>
+                        <tr><th scope="row">Bicicleta urbana clásica</th><td>$10.000</td><td>$40.000</td></tr>
+                        <tr><th scope="row">Bicicleta gravel</th><td>$12.000</td><td>$45.000</td></tr>
+                        <tr><th scope="row">Bicicleta de montaña trail</th><td>$12.000</td><td>$45.000</td></tr>
+                        <tr><th scope="row">Bicicleta plegable</th><td>$12.000</td><td>$45.000</td></tr>
+                        <tr><th scope="row">Bicicleta para dos</th><td>$20.000</td><td>$70.000</td></tr>
+                        <tr><th scope="row">Bicicleta eléctrica</th><td>$25.000</td><td>$80.000</td></tr>
+                        <tr><th scope="row">Triciclo eléctrico</th><td>$30.000</td><td>$95.000</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
-        <section class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4 p-4 p-md-5 my-4 rounded-4 text-bg-primary">
-            <div>
-                <h2 class="fs-2 fw-bold">¿Listo para rodar?</h2>
-                <p class="lead mb-0">Elige tu bicicleta y prepara tu recorrido.</p>
+
+        <section class="mb-4" aria-labelledby="tarifasRutasTitulo">
+            <h2 class="mb-3" id="tarifasRutasTitulo">Tarifas de recorridos guiados</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                    <caption class="caption-top">Precios para recorridos guiados.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Recorrido</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Medallo a Pedal</th><td>2 a 3 horas</td><td>$45.000</td></tr>
+                        <tr><th scope="row">Conexión Urbana</th><td>3 a 4 horas</td><td>$65.000</td></tr>
+                        <tr><th scope="row">Expedición Candela</th><td>5 a 8 horas</td><td>$85.000</td></tr>
+                    </tbody>
+                </table>
             </div>
-            <img class="d-none d-md-block img-fluid rounded" src="img/bicicleta.sobre.rueda.jpg"
-                alt="" width="160">
-            <a class="text-bg-light text-primary text-decoration-none fw-bold px-4 py-3 rounded"
-                href="formulario.html">Ir a reservas</a>
-        </section>
-        <section class="comparativa-bicicletas">
-            <h2>Alquiler y nuestras bicicletas </h2>
-            <div class="table-responsive tabla-responsive">
-            <table class="table table-striped table-hover align-middle">
-            <thead>
-                <tr>
-                    <th scope="col">Tipo de bicicletas</th>
-                    <th scope="col">opciones de tiempos</th>
-                    <th scope="col">Diseño de rutas</th>
-                    <th scope="col">Nivel de Exigencia</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Montaña Trail</th>
-                    <td>Por hora o día, sin guía</td>
-                    <td>Suspensión delantera y 21 cambios</td>
-                    <td>alta</td>
-                </tr>
-                <tr>
-                    <th scope="row">BMX (exp:freestyle)</th>
-                    <td>hora/ dia/ sin guia</td>
-                    <td>skateparks / ciudad</td>
-                    <td>alta</td>
-                </tr>
-                <tr>
-                    <th scope="row">Bicicleta para dos</th>
-                    <td>hora/ dia/ sin guia</td>
-                    <td>recorridos compartidos</td>
-                    <td>por confirmar</td>
-                </tr>
-                <tr>
-                    <th scope="row">Bicicleta eléctrica</th>
-                    <td>Por hora o día, sin guía</td>
-                    <td>Asistencia eléctrica; autonomía de hasta 45 km</td>
-                    <td>Media</td>
-                </tr>
-                <tr>
-                    <th scope="row">Triciclo eléctrico</th>
-                    <td>Por hora o día, sin guía</td>
-                    <td>Capacidad de carga: 150 kg; velocidad máxima: 45 km/h</td>
-                    <td>Baja</td>
-                </tr>
-            </tbody>
-            </table>
-            </div>
+            <p class="alert alert-info" role="note">Confirma disponibilidad, precio y condiciones antes de reservar.</p>
+            <a class="btn btn-primary" href="formulario.html">Ir al formulario de reserva</a>
         </section>
     </main>
 
-    <footer class="site-footer mt-4">
+    <footer class="site-footer mt-auto">
         <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
             <p>Rueda Libre | Medellín, Colombia</p>
-            <a href="index.html#encuentranos"><i class="bi bi-envelope" aria-hidden="true"></i> Contacto y ubicación</a>
+            <a href="formulario.html">Reservas</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
