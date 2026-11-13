@@ -32,10 +32,9 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="recorridos.html">Recorridos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="bicicletas.html">Bicicletas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nocturna.html">Recorrido Nocturno</a></li>
+                        <li class="nav-item"><a class="nav-link" href="recorridos.html">Recorridos y tarifas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#bicicletas">Bicicletas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nocturna.html">Rueda Nocturna</a></li>
                     </ul>
                     <a class="btn btn-primary btn-lg active" href="formulario.html" aria-current="page">Reserva tu bicicleta</a>
                 </div>
@@ -44,49 +43,47 @@
     </header>
     <main class="container flex-grow-1">
     <div class="formulario">
-        <h1>Formulario de Inscripción</h1>
-        <p>Por favor completa el siguiente formulario para inscribirte en nuestros servicios de alquiler de bicicletas y recorridos guiados.</p>
-        <p>Todos los campos son obligatorios.</p>
+        <h1>Reserva tu bicicleta</h1>
+        <p>Completa tus datos y elige una bicicleta y un recorrido.</p>
+        <p>Todos los campos son obligatorios*.</p>
         <div class="alert alert-info alert-dismissible fade show" role="alert">
             <i class="bi bi-info-circle" aria-hidden="true"></i>
-            Completa todos los campos para revisar los términos. Esta demostración no almacena tus datos.
+            Completa todos los campos para revisar los términos.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar alerta"></button>
         </div>
         <form id="formInscripcion" class="row g-3 needs-validation" novalidate>
             <fieldset class="row g-3 border-0 p-0">
-                <legend class="col-12">
-                <p> Inscribete para empezar tu experiencia con Rueda Libre</p>
-                </legend>
+                <legend class="col-12">Tus datos</legend>
                 <div class="col-md-6">
-                <label for="nombre-y-Apellido" class="form-label">Nombre y Apellido:</label>
-                <input type="text" id="nombre-y-Apellido" name="nombre" class="form-control"
-                    placeholder="Pepito Perez" required>
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" class="form-control"
+                    autocomplete="name" required>
                 <div class="invalid-feedback">Por favor, ingresa tu nombre y apellido.</div>
                 </div>
                 <div class="col-md-6">
-                <label for="email" class="form-label">Email:</label>
+                <label for="email" class="form-label">Correo electrónico</label>
                 <input type="email" id="email" name="email" class="form-control"
-                    placeholder="tucorreo@copialoaqui.com" required>
+                    autocomplete="email" required>
                 <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
                 </div>
                 <div class="col-md-6">
-                <label for="telefono" class="form-label"> telefono:</label>
+                <label for="telefono" class="form-label">Teléfono</label>
                 <input type="tel" id="telefono" name="telefono" class="form-control"
-                    placeholder="300422329 ejemplo" required>
+                    autocomplete="tel" required>
                 <div class="invalid-feedback">Por favor, ingresa tu teléfono.</div>
                 </div>
                 <div class="col-md-6">
-                <label for="documento" class="form-label"> C.C.:</label>
-                <input type="number" id="documento" name="documento" class="form-control"
-                    placeholder="cedula de identidad" required>
+                <label for="documento" class="form-label">Documento de identidad</label>
+                <input type="text" id="documento" name="documento" class="form-control"
+                    inputmode="numeric" required>
                 <div class="invalid-feedback">Por favor, ingresa tu documento de identidad.</div>
                 </div>
                 <div class="col-12">
-                <label for="bicicleta" class="form-label">Seleciona tu bicicleta</label>
+                <label for="bicicleta" class="form-label">Bicicleta</label>
                 <select name="bicicleta" id="bicicleta" class="form-select" required>
-                    <option selected disabled value="">Seleciona tu bicicleta</option>
+                    <option selected disabled value="">Selecciona una bicicleta</option>
                     <option value="electrica">Bicicleta eléctrica</option>
-                    <option value="bmx">BMX (exp:freestyle)</option>
+                    <option value="bmx">BMX</option>
                     <option value="dos">Bicicleta para dos</option>
                     <option value="triciclo">Triciclo eléctrico</option>
                     <option value="gravel">Bicicleta gravel</option>
@@ -98,17 +95,17 @@
                 <div class="invalid-feedback">Por favor, selecciona una bicicleta.</div>
                 </div>
                 <div class="col-12">
-                <label for="ruta" class="form-label">Seleciona tu ruta</label>
+                <label for="ruta" class="form-label">Recorrido</label>
                 <select name="ruta" id="ruta" class="form-select" required>
-                    <option selected disabled value="">Seleciona tu ruta</option>
+                    <option selected disabled value="">Selecciona un recorrido</option>
                     <option value="medallo-a-pedal">Ruta medallo a pedal</option>
-                    <option value="conexion-urbana">Ruta Conexion urbana/ rutas de los miradores</option>
-                    <option value="expedicion-candela">Expedicion candela</option>
+                    <option value="conexion-urbana">Conexión Urbana</option>
+                    <option value="expedicion-candela">Expedición Candela</option>
                 </select>
                 <div class="invalid-feedback">Por favor, selecciona una ruta.</div>
                 </div>
                 <div class="col-12 boton">
-                    <button id="mostrarTerminos" type="button" class="btn btn-primary btn-lg">Enviar</button>
+                    <button id="mostrarTerminos" type="button" class="btn btn-primary btn-lg">Enviar formulario</button>
                 </div>
 
             </fieldset>
@@ -122,12 +119,18 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalTerminosLabel">Términos y condiciones</h2>
+                    <h2 class="modal-title fs-5" id="modalTerminosLabel">Políticas de alquiler</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Este formulario es una demostración: los datos no se envían ni se guardan. Al continuar, solo confirmas que revisaste los términos.</p>
+                    <ul>
+                        <li>Presenta un documento de identidad al recoger la bicicleta.</li>
+                        <li>Revisa la bicicleta y el equipo antes de iniciar el recorrido.</li>
+                        <li>Devuelve la bicicleta en el horario y lugar acordados.</li>
+                        <li>Usa casco y respeta las normas de tránsito.</li>
+                    </ul>
+                    <p class="mb-0">Estas condiciones son informativas y deben confirmarse con Rueda Libre. Este formulario es una demostración: no envía ni guarda tus datos.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -140,7 +143,7 @@
     <footer class="site-footer mt-auto">
         <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
             <p>Rueda Libre | Medellín, Colombia</p>
-            <a href="mailto:hola@ruedalibre.example"><i class="bi bi-envelope" aria-hidden="true"></i> Contacto</a>
+            <a href="index.html#bicicletas">Ver bicicletas</a>
         </div>
     </footer>
 
@@ -157,19 +160,11 @@
         const rutaSolicitada = parametros.get('ruta');
 
         if (bicicletaSolicitada) {
-            const opcionBicicleta = Array.from(document.querySelectorAll('#bicicleta option'))
-                .find((opcion) => opcion.value === bicicletaSolicitada);
-            if (opcionBicicleta) {
-                opcionBicicleta.selected = true;
-            }
+            formInscripcion.elements.bicicleta.value = bicicletaSolicitada;
         }
 
         if (rutaSolicitada) {
-            const opcionRuta = Array.from(document.querySelectorAll('#ruta option'))
-                .find((opcion) => opcion.value === rutaSolicitada);
-            if (opcionRuta) {
-                opcionRuta.selected = true;
-            }
+            formInscripcion.elements.ruta.value = rutaSolicitada;
         }
 
         botonEnviar.addEventListener('click', () => {
@@ -193,7 +188,7 @@
             }
 
             bootstrap.Modal.getInstance(modalTerminos)?.hide();
-            resultadoInscripcion.textContent = 'Formulario validado. Esta demostración no envía ni guarda tus datos; comunícate con Rueda Libre para confirmar una reserva.';
+            resultadoInscripcion.textContent = 'Datos revisados. Esta demostración no envía ni guarda tu reserva.';
             resultadoInscripcion.classList.remove('d-none');
             resultadoInscripcion.focus();
         });
