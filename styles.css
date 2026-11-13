@@ -75,7 +75,7 @@ select:focus-visible {
     color: #fff;
     background:
         linear-gradient(90deg, rgb(20 35 45 / 80%), rgb(20 35 45 / 10%)),
-        url("img/portada.jpg") center / cover;
+        url("img/panoramica-medellin.jpg") center / cover;
 }
 
 .introduccion-contenido {

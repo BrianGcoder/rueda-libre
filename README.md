@@ -9,7 +9,6 @@ Sitio de alquiler de bicicletas y recorridos en Medellín. El sitio principal us
 - `formulario.html`: formulario con validación visual y modal de políticas.
 - `nocturna.html`: campaña con planes, tema claro/oscuro y formulario de demostración.
 
-El formulario no envía ni guarda datos. .
 
 ## Desarrollo de Rueda Nocturna
 
